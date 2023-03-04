@@ -1,14 +1,14 @@
 import { assets } from '@/assets'
 import { styles } from '@/styles'
 import { classNames } from '@/utils'
-import { type FunctionComponent } from 'react'
+import { type ReactNode, type FunctionComponent } from 'react'
 import { Button } from './button'
 
 export type SectionWrapperProps = {
   title: string
-  description: string
-  showButton?: boolean
+  description: ReactNode
   mockupImage: string
+  showButton?: boolean
   reverse?: boolean
   banner?: string
 }
@@ -33,11 +33,17 @@ export const SectionWrapper: FunctionComponent<SectionWrapperProps> = ({
       <div
         className={classNames(
           'flex items-center',
-          reverse ? styles.textRight : styles.textLeft,
+          reverse ? styles.boxReverseClass : styles.boxClass,
           'w-11/12 sm:w-full minmd:w-3/4'
         )}
       >
-        <div className={classNames(styles.descDiv)}>
+        <div
+          className={classNames(
+            styles.descDiv,
+            reverse ? styles.fadeRightMini : styles.fadeLeftMini,
+            reverse ? styles.textRight : styles.textLeft
+          )}
+        >
           <h1
             className={classNames(
               reverse ? styles.blackText : styles.whiteText,
@@ -62,7 +68,10 @@ export const SectionWrapper: FunctionComponent<SectionWrapperProps> = ({
           <img
             src={mockupImage}
             alt="mockup"
-            className={classNames(styles.sectionImg)}
+            className={classNames(
+              styles.sectionImg,
+              reverse ? styles.fadeLeftMini : styles.fadeRightMini
+            )}
           />
         </div>
       </div>
