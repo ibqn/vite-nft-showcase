@@ -35,7 +35,7 @@ export const App: FunctionComponent = () => {
         title="Creative way to showcase the store"
         description="The app contains two screens. The first screen lists all NFTs while the second one shows the details of a specific NFT."
         mockupImage={assets.mockup}
-        banner="bg-primary bg-banner02"
+        banner="bg-banner02"
       />
 
       <Download />
@@ -56,5 +56,3 @@ export const App: FunctionComponent = () => {
     </>
   )
 }
-
-export default App
