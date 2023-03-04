@@ -9,21 +9,6 @@ module.exports = {
         banner03: "url('/assets/banner03.svg')",
         banner04: "url('/assets/banner04.svg')",
       },
-      animation: {
-        fadeRightMini: 'fadeRightMini 1s',
-        fadeLeftMini: 'fadeLeftMini 1s',
-      },
-
-      keyframes: {
-        fadeLeftMini: {
-          '0%': { opacity: 0, transform: 'translate3d(-40%, 0, 0)' },
-          '100%': { opacity: 1, transform: 'translateZ(0)' },
-        },
-        fadeRightMini: {
-          '0%': { opacity: 0, transform: 'translate3d(40%, 0, 0)' },
-          '100%': { opacity: 1, transform: 'translateZ(0)' },
-        },
-      },
       colors: {
         primary: '#0B65C6',
         secondary: '#EEF1F6',
@@ -51,5 +36,5 @@ module.exports = {
       IBMPlex: ['IBM Plex Sans', 'sans-serif'],
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [],
 }

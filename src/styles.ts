@@ -42,7 +42,4 @@ export const styles = {
     'font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary',
   featureCard:
     'bg-white m-10 p-6 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80',
-
-  fadeRightMini: 'fill-mode-both animate-fadeRightMini',
-  fadeLeftMini: 'fill-mode-both animate-fadeLeftMini',
 }

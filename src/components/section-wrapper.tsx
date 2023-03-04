@@ -3,6 +3,8 @@ import { styles } from '@/styles'
 import { classNames } from '@/utils'
 import { type ReactNode, type FunctionComponent } from 'react'
 import { Button } from './button'
+import { motion } from 'framer-motion'
+import { fadeLeftMini, fadeRightMini } from '@/variants'
 
 export type SectionWrapperProps = {
   title: string
@@ -37,12 +39,17 @@ export const SectionWrapper: FunctionComponent<SectionWrapperProps> = ({
           'w-11/12 sm:w-full minmd:w-3/4'
         )}
       >
-        <div
+        <motion.div
           className={classNames(
             styles.descDiv,
-            reverse ? styles.fadeRightMini : styles.fadeLeftMini,
+
             reverse ? styles.textRight : styles.textLeft
           )}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={reverse ? fadeRightMini : fadeLeftMini}
         >
           <h1
             className={classNames(
@@ -62,16 +69,18 @@ export const SectionWrapper: FunctionComponent<SectionWrapperProps> = ({
           </p>
 
           {showButton && <Button assetUrl={assets.expo} link="#" />}
-        </div>
+        </motion.div>
 
         <div className={classNames('flex-1 p-8 sm:px-0', styles.flexCenter)}>
-          <img
+          <motion.img
             src={mockupImage}
             alt="mockup"
-            className={classNames(
-              styles.sectionImg,
-              reverse ? styles.fadeLeftMini : styles.fadeRightMini
-            )}
+            className={classNames(styles.sectionImg)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={reverse ? fadeLeftMini : fadeRightMini}
           />
         </div>
       </div>

@@ -6,7 +6,7 @@ import { assets } from '@/assets'
 
 export const App: FunctionComponent = () => {
   return (
-    <>
+    <main className="overflow-hidden">
       <SectionWrapper
         title="You own store of Nifty NFTs. Start Selling & Growing"
         description={
@@ -73,6 +73,6 @@ export const App: FunctionComponent = () => {
           </p>
         </div>
       </footer>
-    </>
+    </main>
   )
 }
