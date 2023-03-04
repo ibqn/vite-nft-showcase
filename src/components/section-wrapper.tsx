@@ -13,5 +13,5 @@ export const SectionWrapper: FunctionComponent<SectionWrapperProps> = ({
   description,
   showButton,
 }) => {
-  return <div>button</div>
+  return <div>section wrapper</div>
 }

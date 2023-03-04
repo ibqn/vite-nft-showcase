@@ -1,3 +1,3 @@
 export const Features = () => {
-  return <div>button</div>
+  return <div>features</div>
 }
