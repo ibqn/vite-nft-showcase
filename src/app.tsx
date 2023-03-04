@@ -12,7 +12,7 @@ export const App: FunctionComponent = () => {
         description="Buy, store, collect NFTS, exchange & earn crypto. Join 25+ million people using ProNef Marketplace."
         showButton
         mockupImage={assets.homeHero}
-        banner="banner"
+        banner="bg-banner"
       />
 
       <SectionWrapper
@@ -35,16 +35,24 @@ export const App: FunctionComponent = () => {
         title="Creative way to showcase the store"
         description="The app contains two screens. The first screen lists all NFTs while the second one shows the details of a specific NFT."
         mockupImage={assets.mockup}
-        banner="banner02"
+        banner="bg-primary bg-banner02"
       />
 
       <Download />
 
-      <div className="bg-primary banner04 flex-col items-center justify-center px-4 py-2 text-center">
-        <p className={classNames(styles.pText, styles.whiteText)}>
-          Made with love in <span className="bold">Berlin</span>
-        </p>
-      </div>
+      <footer
+        className={classNames(styles.bgImage, 'bg-primary bg-banner04 pt-20')}
+      >
+        <div
+          className={
+            'flex-col items-center justify-center px-4 py-2 text-center'
+          }
+        >
+          <p className={classNames(styles.pText, styles.whiteText)}>
+            Made with love in <span className="font-bold">Berlin</span>
+          </p>
+        </div>
+      </footer>
     </>
   )
 }

@@ -5,6 +5,8 @@ export const styles = {
   bgWhite: 'bg-white',
   bgPrimary: 'bg-primary',
 
+  bgImage: 'bg-cover bg-center bg-no-repeat h-full w-full',
+
   boxClass: 'flex-row md:flex-col',
   boxReverseClass: 'flex-row-reverse md:flex-col-reverse',
 
